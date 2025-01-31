@@ -133,6 +133,7 @@
     // Listen for Unity events
     window.addEventListener('UnityMessage', (e) => {
       console.log("unity flag listener:", unityFlag);
+      console.log("unity flag listener event:", e);
       if (e.detail === "toggleFlag") {
         unityFlag = !unityFlag; // Toggle the flag
         console.log("Flag toggled. New state:", unityFlag);
