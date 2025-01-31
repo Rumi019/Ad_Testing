@@ -128,6 +128,17 @@
 
     document.body.appendChild(script);
 
+    // Initialize the flag
+    let unityFlag = false;
+    // Listen for Unity events
+    window.addEventListener('UnityMessage', (e) => {
+      if (e.detail === "toggleFlag") {
+        unityFlag = !unityFlag; // Toggle the flag
+        console.log("Flag toggled. New state:", unityFlag);
+      }
+    });
+
+
   </script>
 
 </body>
